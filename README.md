@@ -3,6 +3,7 @@ dbfToJson
 
 Convert DBF to JSON and prettyPrint
 
-include 'dbfToJson.php';
+Usage:
 
+include 'dbfToJson.php';
 echo dbfToJson('file.dbf');
