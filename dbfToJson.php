@@ -1,3 +1,4 @@
+<?php
 function prettyPrint( $json, $tab = "  " ) {
   $result = '';
   $level = 0;
@@ -55,7 +56,6 @@ function prettyPrint( $json, $tab = "  " ) {
     
     $result .= $char.$post;
   } // for
-
   return $result;
 }
 
@@ -76,9 +76,6 @@ function dbfToJson($file, $from = 'cp866', $to = 'utf-8') {
       foreach ($tmp as $key=>$value) $tmp[$key] = iconv($from, $to, trim($value)); 
       $arr[] = $tmp;
     }
-
     return str_replace( '\\', '', prettyPrint(decodeUnicode(json_encode($arr))) );
-
-    
   }
 }
